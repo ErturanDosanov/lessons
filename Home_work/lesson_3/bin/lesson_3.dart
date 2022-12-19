@@ -6,7 +6,6 @@ void main(List<String> arguments) {
   int finger = Random().nextInt(6);
   print(taskOne(finger));
   int min = Random().nextInt(60);
-  List s;
 }
 
 //Задание 1
