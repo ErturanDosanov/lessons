@@ -1,4 +1,6 @@
+import 'dart:io';
 import 'dart:math';
+import 'dart:mirrors';
 
 import 'package:lesson_8/lesson_8.dart' as lesson_8;
 
@@ -54,16 +56,9 @@ void main(List<String> arguments) {
       print('error');
   }
 //Task 1
-  int day = Random().nextInt(31);
-  if (day >= 1 && day <= 10) {
-    print('First decade');
-  } else if (day >= 11 && day <= 20) {
-    print('Second decade');
-  } else if (day >= 21 && day <= 31) {
-    print('Third decade');
-  } else {
-    print('None');
-  }
+  print('Введите число');
+  int day = int.parse(stdin.readLineSync()!);
+  taskOne(day);
 
 //Task 2
   int month = Random().nextInt(12);
@@ -78,8 +73,36 @@ void main(List<String> arguments) {
   } else {
     print('none');
   }
-//Task 3
+
+// Task 6
+
 }
+
+void taskOne(int day) {
+  if (day <= 10 && day > 0) {
+    print('1 decade');
+  } else if (day <= 20 && day > 10) {
+    print('2 decade');
+  } else if (day >= 21 && day <= 31) {
+    print('3 decade');
+  } else {
+    print('none');
+  }
+}
+
+void taskTwo(int months) {
+  if (months == 12 || months > 0 && months <= 2) {
+    print('Winter');
+  } else if (months < 6 && months >= 3) {
+    print('Spring');
+  } else if (months >= 6 && months < 9) {
+    print('Summer');
+  } else if (months >= 10 && months < 12) {
+    print('Autumn');
+  } else {
+    print('None');
+  }
+}   
   // int j = 0;
   // int b = 20;
   // int summ = 0;
