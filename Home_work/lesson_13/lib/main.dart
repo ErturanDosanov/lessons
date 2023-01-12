@@ -20,11 +20,14 @@ class MyWidget extends StatelessWidget {
                     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               ),
             ),
-            body: Row(children: const [
-              Containers(mainAxisAlignment: MainAxisAlignment.start),
-              Containers(mainAxisAlignment: MainAxisAlignment.center),
-              Containers(mainAxisAlignment: MainAxisAlignment.end),
-            ])));
+            body: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Row(children: const [
+                Containers(mainAxisAlignment: MainAxisAlignment.start),
+                Containers(mainAxisAlignment: MainAxisAlignment.center),
+                Containers(mainAxisAlignment: MainAxisAlignment.end),
+              ]),
+            )));
   }
 }
 
