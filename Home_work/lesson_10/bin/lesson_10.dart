@@ -3,8 +3,6 @@ import 'dart:async';
 import 'package:lesson_10/lesson_10.dart' as lesson_10;
 
 void main(List<String> arguments) {
-  Son re = Son( 'Right', hair: 'Blondie');
-  re.printIf();
 }
 
 class Karta {
@@ -39,8 +37,3 @@ class Father {
   }
 }
 
-class Son extends Father {
-  String look;
-  @override
-  Son({}):super(Father(hand,,eyes));
-}
