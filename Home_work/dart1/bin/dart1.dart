@@ -16,8 +16,4 @@ void main(List<String> arguments) {
   String myText;
   myText = '$myNumber';
   print(myText);
-
-  int d = 11;
-  print(d.isEven);
-  print(d.isOdd);
 }
